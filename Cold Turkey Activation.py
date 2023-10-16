@@ -24,7 +24,7 @@ def activate():
         else:
             print("Looks like your copy of Cold Turkey Blocker is already activated.")
             print("Deactivating it now.")
-            dat["additional"]["proStatus"] = free
+            dat["additional"]["proStatus"] = "free"
             c.execute(
                 "UPDATE settings set value =  WHERE key = 'settings'", (json.dumps(dat),))
             conn.commit()
